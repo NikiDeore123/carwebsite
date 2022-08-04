@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Joan", serif;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)),
+    url(./images/car8.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 80px;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.6s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.textbox {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.textbox h1 {
+  font-size: 50px;
+}
+
+.textbox .para1 {
+  margin: 10px 0 40px;
+  font-size: 21px;
+  color: white;
+}
+
+.btn {
+  border: 1px solid white;
+  padding: 8px 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  background: aqua;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  border: 1px solid rgb(77, 255, 0);
+  background: rgb(77, 255, 0);
+  transition: 1s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .textbox h1 {
+    font-size: 30px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: rgb(41, 40, 40, 0.9);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.8s;
+  }
+  nav .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+/* services */
+
+.services {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 800;
+}
+
+p {
+  color: black;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 30px;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colm {
+  flex-basis: 31%;
+  border-radius: 10px;
+  background: #f9e2e2;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 900;
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.colm:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 650px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Facilities */
+
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.colm-facilities {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.colm-facilities img {
+  width: 100%;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.colm-facilities p {
+  padding: 0;
+  font-weight: 200px;
+  font-size: 20px;
+}
+
+.colm-facilities h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* action section */
+
+.action {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(./images/car2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.action h1 {
+  color: white;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 650px) {
+  .action h1 {
+    font-size: 25px;
+  }
+}
+
+/* footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height: 800px) {
+  .footer {
+    position: static;
+  }
+}
+
+.footer {
+  background-color: #2d2a30;
+  box-sizing: border-box;
+  widows: 100%;
+  text-align: left;
+  font: bold 16px sans-serief;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer .footer-left {
+  width: 30%;
+}
+
+.footer h3 {
+  color: white;
+  font: bold 36px "cursive", cursive;
+  margin: 0;
+}
+
+.footer h3 span {
+  color: #e0ac1c;
+}
+
+.footer .footerlinks {
+  color: white;
+  margin: 20px 0 12px;
+}
+
+.footer .footerlinks a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .footer-center {
+  width: 35%;
+}
+
+.footer .footer-center i:hover {
+  background-color: #f28f92;
+  transition: 1s ease-in;
+  transform: rotate(360deg);
+}
+
+.footer .footer-center i {
+  background-color: #35a6ec;
+  color: white;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #e0ac1c;
+  text-decoration: none;
+}
+
+.footer .footer-right {
+  width: 30%;
+}
+
+.footer .footer-company-about {
+  line-height: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .footer-company-about span {
+  display: block;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .footer-icons {
+  margin-top: 25px;
+}
+
+.footer .footer-icons i {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer .footer-icons i:hover {
+  background-color: #35a6ec;
+}
+
+.footerlinks a:hover {
+  color: #35a6ec;
+}
+
+@media (max-width: 650px) {
+  .footer.footerlinks,
+  .footer.footer-center,
+  footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer .footer-center i {
+    margin-left: 0;
+  }
+}
